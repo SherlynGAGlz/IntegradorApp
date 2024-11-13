@@ -6,11 +6,11 @@ function App() {
 
   return (
     <Container>
-    <Card.Title className='mb-4'>Preguntas de servicios universitarios</Card.Title>
+    <Card.Title className='mb-4'>PREGUNTAS DE SERVICIOS UNIVERSITARIOS</Card.Title>
     <Form>
       <Form.Group className="mb-3">
-        <Form.Label>1. ¿Cómo calificaría la calidad del servicio de atnención en servicio de cajas en la universidad??</Form.Label>
-        <Form.Control placeholder='Ingrese una calificación del 1 al 10' type="number"></Form.Control>
+        <Form.Label>1. ¿Cómo calificaría la calidad del servicio de atnención en servicio de cajas en la universidad?</Form.Label>
+        <Form.Control className='hola' placeholder='Ingrese una calificación del 1 al 10' type="number"></Form.Control>
       </Form.Group> 
       <Form.Group className="mb-3">
         <Form.Label>2. ¿Qué tan accesible monetariamente piensas que son las plataformas de aprendizaje que usa la universidad?</Form.Label>
@@ -64,8 +64,8 @@ function App() {
         <Form.Label>14. En cuanto al apoyo psicológico, ¿cómo lo calificarías?</Form.Label>
         <Form.Control placeholder='Ingrese su respuesta'></Form.Control>
       </Form.Group> 
-      <Button type='submit'>Enviar</Button>
-      <Button type='reset' variant='danger'>Cancelar</Button>
+      <Button className='button1' type='submit'>Enviar</Button>
+      <Button className='button2' type='reset' variant='danger'>Cancelar</Button>
     </Form>
    </Container>
    
