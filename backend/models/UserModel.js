@@ -2,15 +2,15 @@ import {Schema, model } from "mongoose";
 const UserSchema = new Schema ({
     name: {
         type : String,
-        require : True
+        require : true
     },
     password: {
         type : String,
-        require : True
+        require : true
     },
     email: {
         type : String,
-        require : True
+        require : true
     }
 });
 //conexion en mongo es users
