@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = required('mongoose');
 const {
   servicioSchema,
   categoriaSchema,
@@ -6,7 +6,7 @@ const {
   usuarioSchema,
   valoracionSchema,
   evaluacionSchema
-} = require('./schemas');
+} = required('./schemas');
 
 const servicioModel = mongoose.model('Servicio', servicioSchema);
 const categoriaModel = mongoose.model('Categoria', categoriaSchema);

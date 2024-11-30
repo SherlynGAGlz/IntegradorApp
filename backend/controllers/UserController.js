@@ -4,6 +4,8 @@
 import { UserModel } from "../models/UserModel.js";
 import jwt from "jsonwebtoken";
 
+
+
 //! pregunta si es falso, nulo, indefinido, devuelve un true 
 export default {
     //asincrono que se puede tardar en ejecutar
@@ -58,6 +60,7 @@ export default {
             res.status(500).json({
                 "msg" :"Ocurrio error al eliminar usuario"
             });
+            return
         }
     },
     updateUser : async (req, res) => {
@@ -116,7 +119,7 @@ export default {
 
         }
     },
-    gebUser : async (req, res) => {
+    getUser : async (req, res) => {
         try {
             const id = req.params.id;
             const user = await UserModel.findById(id);
@@ -151,14 +154,14 @@ export default {
                 return;
             }
             //un objeto lo transporma a texto stringify 
-            const token = just.sign(JSON.stringify(user), "shh");
+            const token = jwt.sign(JSON.stringify(user), "shh");
 
             res.status(200).json({
                 "msg" : "Loggeado con exito",
                 user
             })
             return;
-        } catch {
+        } catch(error) {
             console.log(error);
             res.status(500).json({
                 "msg" : "Ocurrio un error al loggear usuario",
